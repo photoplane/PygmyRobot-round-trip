@@ -39,4 +39,9 @@ ELSE TURNGPI 0 CCP ! (otherwise half turn to the left)
 THEN THEN (end of the conditional branch)
 NEXT
 
-;
+;![QuatreCapteurSuiveCoteCircuit](https://github.com/user-attachments/assets/741c5867-5506-43ec-8074-e568392f5999)
+
+[GPIO.pdf](https://github.com/user-attachments/files/17533583/GPIO.pdf)
+
+
+
