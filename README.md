@@ -1,5 +1,6 @@
 
-![Experimental](https://github.com/user-attachments/assets/32f84853-e37d-4925-9e66-8f48731e5a8c)
+![Capture du 2024-10-27 13-29-59](https://github.com/user-attachments/assets/0979873f-cc47-4ed7-bb14-5a71dd0c5b63)
+
 
 PygmyRobot round trip, it changes direction at each pass.
 
