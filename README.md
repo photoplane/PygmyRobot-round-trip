@@ -1,3 +1,6 @@
+
+![Experimental](https://github.com/user-attachments/assets/32f84853-e37d-4925-9e66-8f48731e5a8c)
+
 PygmyRobot round trip, it changes direction at each pass.
 
 The PygmyRobot is equipped with four line following sensors. They have the following operating mode: for white they read the value 1 and 0 for black. For greater efficiency, the sensors are arranged inside the black line. In this application, the robot travels a straight line limited at both ends by black lines to make a half-turn (180°) clockwise and counterclockwise. To achieve this reversal of direction, a variable, called CCP, must be set up; at each pass it will record a 0 or 1, which will give the direction of rotation to the robot.
