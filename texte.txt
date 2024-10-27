@@ -1,0 +1,21 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%% GITHUB %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+PygmyRobot round trip, it changes direction at each pass.
+The PygmyRobot is equipped with four line following sensors. They have the following operating mode: for white they read the value 1 and 0 for black. For greater efficiency, the sensors are arranged inside the black line. In this application, the robot travels a straight line limited at both ends by black lines to make a half-turn (180°) clockwise and counterclockwise. To achieve this reversal of direction, a variable, called CCP, must be set up; at each pass it will record a 0 or 1, which will give the direction of rotation to the robot.
+
+Hippodrome round trip.
+The robot changes direction at each lap of the racetrack.
+The PygmyRobot is equipped with four line-following sensors. They have the following operating mode: for white they read the value 1 and 0 for black. For greater efficiency, the sensors are arranged inside the black line. In this application, the robot travels a straight line limited at both ends by black lines to make a half-turn (180°) clockwise and counterclockwise. To achieve this reversal of direction, a variable named CCP must be set up; at each pass it will record a 0 or 1, which will give the direction of rotation to the robot.
+
+The code in Pygmy Forth:
+VARIABLE CCP ( setting up a variable )
+: STCM ( -- )
+500 FOR ( use of a FOR NEXT loop limited to 500 )
+INITLF1 INITLF2 AND 0= IF MOTORAV ( if the two central sensors detect black, i.e. 0, forward)
+THEN ( end of conditional connection )
+INITLF2 0= NOT IF TURNG MOTORAV ( if this sensor is not on white turn left )
+INITLF1 0= NOT IF TURND MOTORAV THEN ( if this sensor is not on white turn right )
+THEN ( end of conditional connection )
+INITLF1 INITLF2 INITLF3 INITLF4 + 0=
+IF ( if the 4 sensors are on black)
+CCP @ 0= IF TURNDPI 1 CCP ! (we go to this condition, if CCP is 0 half turn to the right)
+
