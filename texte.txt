@@ -1,11 +1,7 @@
-PygmyRobot round trip, it changes direction at each pass.
-The PygmyRobot is equipped with four line following sensors. They have the following operating mode: for white they read the value 1 and 0 for black. For greater efficiency, the sensors are arranged inside the black line. In this application, the robot travels a straight line limited at both ends by black lines to make a half-turn (180°) clockwise and counterclockwise. To achieve this reversal of direction, a variable, called CCP, must be set up; at each pass it will record a 0 or 1, which will give the direction of rotation to the robot.
-
-Hippodrome round trip.
-The robot changes direction at each lap of the racetrack.
-The PygmyRobot is equipped with four line-following sensors. They have the following operating mode: for white they read the value 1 and 0 for black. For greater efficiency, the sensors are arranged inside the black line. In this application, the robot travels a straight line limited at both ends by black lines to make a half-turn (180°) clockwise and counterclockwise. To achieve this reversal of direction, a variable named CCP must be set up; at each pass it will record a 0 or 1, which will give the direction of rotation to the robot.
-
-The code in Pygmy Forth:
+Hippodrome aller-retour
+Le robot change de sens à chaque tour d'hippodrome.
+Le PygmyRobot est équipé de quatre capteurs suiveurs de ligne. Ils ont un mode de fonctionnement suivant : pour le blanc ils lisent la valeur 1 et 0 pour le noir. Pour plus d'efficacité les capteurs sont disposés à l'intérieur de la ligne noire. Dans cette application le robot parcours une ligne droite limité aux deux extrémités par des traits noir pour faire un  demi-tour (180°) dans le sens des aiguilles d'une montre et en sens inverse. Pour réaliser cette inversion de sens, il fait mettre en place une variable, nommée CCP, à chaque passage elle va enregistrer un 0 soit 1, qui donnera le sens de rotation au robot.
+Le code en Pygmy Forth:
 VARIABLE CCP ( setting up a variable )
 : STCM ( -- )
 500 FOR ( use of a FOR NEXT loop limited to 500 )
